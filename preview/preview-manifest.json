@@ -1,0 +1,30 @@
+{
+  "label": "preview, not a master.",
+  "preview_path": "preview/two-step-garage-chords-simple-synth-preview.mp3",
+  "preview_sha256": "6eda513cc0beed211e7b23b54d5fa20f56a03b3bf7a61a450b69d21fe4e2b946",
+  "source_midi_path": "midi/gc01-rain-shelter/gc01-rain-shelter-combined.mid",
+  "source_midi_sha256": "12d7c0aff2a75661c7d55add1d96c64258cae882e42774f58031656fde31f007",
+  "renderer": "release-simple-synth 1.0.0",
+  "renderer_configuration": {
+    "sample_rate": 44100,
+    "source_tracks": [
+      "chord_pulse",
+      "counter_texture",
+      "drums",
+      "principal_motif",
+      "sub_bass",
+      "vocal_like_synth"
+    ],
+    "processing": "Per-voice synthesis and envelopes; summed samples are clamped to +/-0.95, converted to 16-bit stereo PCM and encoded to 192 kb/s MP3."
+  },
+  "selection": {
+    "study": "gc01",
+    "start_seconds": 0,
+    "end_seconds": 58.182
+  },
+  "measurement": {
+    "sample_peak": 0.121834,
+    "not_lufs_or_true_peak": true
+  },
+  "limitations": "Automated generation and decode checks only. Nobody auditioned this simple-synthesis preview. It is not a finished-production sound or master."
+}

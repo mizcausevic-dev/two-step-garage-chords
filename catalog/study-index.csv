@@ -1,0 +1,5 @@
+study_id,title,collection,tonic,tempo_bpm,meter,ppq,bars,end_tick,combined_path,roles
+gc01,Rain Shelter,pack-local equal-tempered pitch collection,D,132,4/4,480,32,61440,midi/gc01-rain-shelter/gc01-rain-shelter-combined.mid,chord_pulse; sub_bass; principal_motif; vocal_like_synth; counter_texture; drums
+gc02,Side Street,pack-local equal-tempered pitch collection,F,132,4/4,480,32,61440,midi/gc02-side-street/gc02-side-street-combined.mid,chord_pulse; sub_bass; principal_motif; vocal_like_synth; counter_texture; drums
+gc03,Late Connection,pack-local equal-tempered pitch collection,G#,132,4/4,480,32,61440,midi/gc03-late-connection/gc03-late-connection-combined.mid,chord_pulse; sub_bass; principal_motif; vocal_like_synth; counter_texture; drums
+gc04,Blue Window,pack-local equal-tempered pitch collection,D#,132,4/4,480,32,61440,midi/gc04-blue-window/gc04-blue-window-combined.mid,chord_pulse; sub_bass; principal_motif; vocal_like_synth; counter_texture; drums
