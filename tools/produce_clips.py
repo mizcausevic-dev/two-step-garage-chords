@@ -89,6 +89,22 @@ def main():
                             duration = min((180, 240, 300)[(hit + study_index) % 3], release.BAR_TICKS - offset)
                             for pitch in chord:
                                 notes.append((bar * release.BAR_TICKS + offset, duration, pitch, 68 + 7 * ((bar + hit + variation) % 4)))
+                if kind == "chords" and args.pack == 'two-step-garage-chords':
+                    # Revoice the original chord events; preserve attacks, lengths and pitch classes.
+                    groups = {}
+                    for event in notes:
+                        groups.setdefault(event[0], []).append(event)
+                    notes = []
+                    for onset, chord in sorted(groups.items()):
+                        chord.sort(key=lambda e: e[2])
+                        for rank, (start, length, pitch, velocity) in enumerate(chord):
+                            if study_index == 1 and rank == 0:
+                                pitch += 12
+                            elif study_index == 2 and rank == 0:
+                                pitch -= 12
+                            elif study_index == 3 and rank == 1:
+                                pitch += 12
+                            notes.append((start, length, pitch, velocity))
                 if not notes:
                     raise ValueError(f"Empty clip: {study['id']} {kind} {variation}")
                 label = "chord-progression" if kind == "chords" else ("bass-hook" if kind == "sub_bass" else "melody")
