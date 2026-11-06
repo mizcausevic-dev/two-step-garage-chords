@@ -76,6 +76,19 @@ def main():
                             if kind == "sub_bass" and study_index and local // release.BAR_TICKS == study_index and local % release.BAR_TICKS == 0:
                                 continue
                             notes.append((local, min(event["duration"], END-local), event["pitch"], event["velocity"]))
+                if args.pack == "two-step-garage-chords" and kind == "chords":
+                    # Chopped, syncopated chord answers use the study harmony
+                    # with alternating voicings across each four-bar phrase.
+                    entries = ((240, 840, 1500), (360, 960, 1560), (120, 720, 1320), (300, 1020, 1620))
+                    notes = []
+                    for bar in range(4):
+                        chord = sorted(study["chords"][(bar + variation) % 4])
+                        for _ in range((study_index + bar + variation + 1) % len(chord)):
+                            chord = chord[1:] + [chord[0] + 12]
+                        for hit, offset in enumerate(entries[(bar + variation) % 4]):
+                            duration = min((180, 240, 300)[(hit + study_index) % 3], release.BAR_TICKS - offset)
+                            for pitch in chord:
+                                notes.append((bar * release.BAR_TICKS + offset, duration, pitch, 68 + 7 * ((bar + hit + variation) % 4)))
                 if not notes:
                     raise ValueError(f"Empty clip: {study['id']} {kind} {variation}")
                 label = "chord-progression" if kind == "chords" else ("bass-hook" if kind == "sub_bass" else "melody")
