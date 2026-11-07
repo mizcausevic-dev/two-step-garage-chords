@@ -198,8 +198,8 @@
     },
     {
       "path": "downloads/two-step-garage-chords-midi.zip",
-      "bytes": 33754,
-      "sha256": "6eb3a0859a05e529e05925fd6fb7a016491617696b1c4b46c5c21dd191d0a868"
+      "bytes": 34741,
+      "sha256": "f8457c1f55ab988964a1aa80e18411744b97b2457558161b65df95361aea5be8"
     },
     {
       "path": "film/motion-note-roll.png",
@@ -233,8 +233,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 10799,
-      "sha256": "d75256a5dcf2cc04be839a983e24bad12a676d135320e83751051b04d3633ca2"
+      "bytes": 10989,
+      "sha256": "8a47a79d57b1f25f6869bea7b3bb4697be8139e27bc9217d52d4a9f057fb265a"
     },
     {
       "path": "midi/gc01-rain-shelter/chord_pulse.mid",
@@ -377,6 +377,11 @@
       "sha256": "882ccc1cf68325ef1958f6f3bf1ce5421b1c00109454117353b03f7501bc2ae0"
     },
     {
+      "path": "MIDI-BUYER-LICENSE-v1.0.txt",
+      "bytes": 1652,
+      "sha256": "1111ca6dd4ca4ff4163f199fae341ff54ca3715acc3cf19ca332f2f6e58c36c9"
+    },
+    {
       "path": "preview/preview-manifest.json",
       "bytes": 1137,
       "sha256": "4a2a1cfeac5b8d2fe9196335666b06aaa1cb3e28c53df5f32ce0059624fb9431"
@@ -388,8 +393,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4262,
-      "sha256": "7acf573ee3bcd5ca0a4744116dcd2960a9cbb1e6ab2a25a7f93912f4cd7bbf69"
+      "bytes": 4377,
+      "sha256": "54f7a2bca3db8477432aa8c1f8071f898095dc09fd6754ef649bd9aa960de837"
     },
     {
       "path": "REVISION.md",
